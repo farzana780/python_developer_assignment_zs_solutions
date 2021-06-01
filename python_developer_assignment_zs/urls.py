@@ -19,4 +19,12 @@ from api import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('country/', views.Countrylist.as_view(), name='countrylist'),
+    path('country-filter/<str:filter>', views.Countrylist.as_view(), name='country'),
+    path('state/', views.Statelist.as_view(), name='statelist'),
+    path('state-filter/<str:st>', views.Statelist.as_view(), name='state'),
+    path('address/', views.Addresslist.as_view(), name='addresslist'),
+    path('address-filter/<int:rn>', views.Addresslist.as_view(), name='address'),
+    path('address-filter/<str:hn>', views.Addresslist.as_view(), name='address'),
+    path('address-details/<int:pk>', views.AddressDetailslist.as_view(), name='address'),
 ]
