@@ -24,7 +24,7 @@ urlpatterns = [
     path('state/', views.Statelist.as_view(), name='statelist'),
     path('state-filter/<str:st>', views.Statelist.as_view(), name='state'),
     path('address/', views.Addresslist.as_view(), name='addresslist'),
-    path('address-filter/<int:rn>', views.Addresslist.as_view(), name='address'),
-    path('address-filter/<str:hn>', views.Addresslist.as_view(), name='address'),
-    path('address-details/<int:pk>', views.AddressDetailslist.as_view(), name='address'),
+    path('address-filter/<int:rn>', views.Addresslist.as_view(), name='address_rn'),
+    path('address-filter/<str:hn>', views.Addresslist.as_view(), name='address_hn'),
+    path('address-details/<int:pk>', views.AddressDetailslist.as_view(), name='address_details'),
 ]
